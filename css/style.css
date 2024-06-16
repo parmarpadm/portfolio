@@ -4509,3 +4509,36 @@ textarea::-webkit-input-placeholder {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* Card Hover */
+.single-brand-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.single-brand-item:hover .details {
+  opacity: 1;
+  visibility: visible;
+}
+
