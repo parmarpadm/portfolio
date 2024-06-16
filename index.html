@@ -16,6 +16,10 @@
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Owl Carousel CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
@@ -458,6 +462,51 @@
 		</div>
 	</section>
 
+	<section class="features_area">
+		<div class="container">
+			<div class="achievement_area section_gap_bottom">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 text-center">
+							<div class="main_title">
+								<h2>Achievements</h2>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="achievement_slider owl-carousel">
+								<div class="achievement_item">
+									<img src="img/achievements/Spotlight_Award_2023.jpeg" alt="Spotlight Award 2023">
+									<h4>Spotlight Award 2023</h4>
+									<!-- <p>Short description of the achievement.</p> -->
+								</div>
+								<div class="achievement_item">
+									<img src="img/achievements/System_Design.jpeg" alt="System Design">
+									<h4>System Design</h4>
+									<!-- <p>Short description of the achievement.</p> -->
+								</div>
+								<div class="achievement_item">
+									<img src="img/achievements/Architecture_Deep_Learning.jpeg" alt="Architecture Deep Learning">
+									<h4>Architecture Deep Learning</h4>
+									<!-- <p>Short description of the achievement.</p> -->
+								</div>
+								<div class="achievement_item">
+									<img src="img/achievements/Amazon_Frontend_Design.jpeg" alt="Amazon Frontend Design">
+									<h4>Amazon Frontend Design</h4>
+									<!-- <p>Short description of the achievement.</p> -->
+								</div>
+								<!-- Amazon_Frontend_Design -->
+								<!-- Add more achievement items as needed -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
 	<!--================ Start Testimonial Area =================-->
 	<div class="testimonial_area section_gap_bottom">
 		<div class="container">
@@ -695,7 +744,35 @@
 	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/mail-script.js"></script>
-	<!-- hover.js -->
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Owl Carousel JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".achievement_slider").owlCarousel({
+				items: 1,
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				nav: true,
+				dots: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					600: {
+						items: 2
+					},
+					1000: {
+						items: 3
+					}
+				}
+			});
+		});
+	</script>
+
+
 </body>
 
 </html>

@@ -4542,3 +4542,29 @@ textarea::-webkit-input-placeholder {
   visibility: visible;
 }
 
+.achievement_item {
+  text-align: center;
+  padding: 20px;
+}
+
+.achievement_item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.achievement_item img {
+  height: 200px; /* Adjust this value as needed */
+  object-fit: cover;
+}
+
+.achievement_item h4 {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.achievement_item p {
+  font-size: 14px;
+  color: #666;
+}
