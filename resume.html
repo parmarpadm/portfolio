@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description"
         content="Padm M. Parmar - Senior Software Engineer with 7+ years of expertise in full-stack development, DevOps, and IoT solutions">
     <meta name="keywords"
@@ -44,6 +44,8 @@
             color: var(--text-primary);
             background: var(--light-bg);
             overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
 
         .container {
@@ -345,6 +347,8 @@
                 linear-gradient(180deg, var(--primary-color), var(--secondary-color));
             background-origin: border-box;
             background-clip: padding-box, border-box;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .project-item:hover {
@@ -487,16 +491,24 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
-                margin: 10px;
+                margin: 0;
                 border-radius: 0;
+                box-shadow: none;
             }
 
             .header {
-                padding: 40px 20px;
+                padding: 30px 15px;
             }
 
             .header-content {
+                flex-direction: column;
                 text-align: center;
+                gap: 20px;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
             }
 
             .header-text {
@@ -504,35 +516,182 @@
             }
 
             .header h1 {
-                font-size: 2.2em;
+                font-size: 1.8em;
+                line-height: 1.2;
             }
 
-            .content {
-                padding: 40px 20px;
+            .header .title {
+                font-size: 1.1em;
             }
 
             .contact-info {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .contact-item {
+                width: 100%;
                 justify-content: center;
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+
+            .content {
+                padding: 30px 15px;
+            }
+
+            .section {
+                margin-bottom: 40px;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+                margin-bottom: 20px;
+            }
+
+            .profile {
+                padding: 15px;
+                font-size: 1em;
+            }
+
+            .experience-item,
+            .project-item,
+            .education-item {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .company,
+            .project-title {
+                font-size: 1.1em;
+            }
+
+            .position {
+                font-size: 1em;
+            }
+
+            .duration {
+                font-size: 0.85em;
+            }
+
+            .project-description {
+                font-size: 0.95em;
+            }
+
+            .project-tech {
+                font-size: 0.85em;
+                padding: 10px 15px;
             }
 
             .education-item {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 10px;
+            }
+
+            .education-details h3 {
+                font-size: 1.05em;
+            }
+
+            .education-details p {
+                font-size: 0.9em;
             }
 
             .education-year {
                 text-align: left;
-                margin-top: 15px;
+                width: 100%;
+                padding-top: 10px;
+                border-top: 1px solid rgba(99, 102, 241, 0.2);
             }
 
-            .controls {
-                bottom: 20px;
-                right: 20px;
-                flex-direction: column;
+            .grade {
+                font-size: 1em;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .skill-category {
+                padding: 15px;
+            }
+
+            .skill-category h3 {
+                font-size: 1.05em;
+                margin-bottom: 10px;
+            }
+
+            .skill-tag {
+                font-size: 0.85em;
+                padding: 5px 12px;
+            }
+
+            .personal-info {
+                padding: 20px 15px;
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .personal-info div {
+                font-size: 0.95em;
+            }
+
+            .controls {
+                bottom: 15px;
+                right: 15px;
+                gap: 8px;
+                flex-direction: row;
+            }
+
+            .btn {
+                padding: 10px 18px;
+                font-size: 0.85em;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+
+            .header .title {
+                font-size: 1em;
+            }
+
+            .section h2 {
+                font-size: 1.3em;
+            }
+
+            .contact-item {
+                font-size: 0.85em;
+                padding: 8px 12px;
+            }
+
+            .skill-tags {
+                gap: 6px;
+            }
+
+            .skill-tag {
+                font-size: 0.8em;
+                padding: 4px 10px;
+            }
+        }
+
+        /* Ensure text doesn't overflow on small screens */
+        @media (max-width: 380px) {
+            .header h1 {
+                font-size: 1.3em;
+            }
+
+            .project-title::before {
+                display: none;
+            }
+
+            .contact-item span:first-child {
+                display: none;
             }
         }
 
@@ -567,7 +726,7 @@
     <div class="container">
         <div class="header">
             <div class="header-content">
-                <img src="img/PADM_PARMAR.jpeg" alt="Padm M. Parmar" class="profile-pic"
+                <img src="/img/PADM_PARMAR.jpeg" alt="Padm M. Parmar" class="profile-pic"
                     onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgZmlsbD0iIzY2NjZmMSIvPgogIDx0ZXh0IHg9IjkwIiB5PSI5NSIgZm9udC1zaXplPSI2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UFA8L3RleHQ+Cjwvc3ZnPg=='" />
                 <div class="header-text">
                     <h1>Padm M. Parmar</h1>
@@ -643,9 +802,9 @@
                     <div class="skill-category">
                         <h3>Programming Languages</h3>
                         <div class="skill-tags">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Node.js</span>
                             <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
                         </div>
                     </div>
 
@@ -662,8 +821,8 @@
                         <div class="skill-tags">
                             <span class="skill-tag">Express.js</span>
                             <span class="skill-tag">Electron.js</span>
-                            <span class="skill-tag">React.js</span>
                             <span class="skill-tag">Django REST Framework</span>
+                            <span class="skill-tag">React.js</span>
                         </div>
                     </div>
 
@@ -672,8 +831,8 @@
                         <div class="skill-tags">
                             <span class="skill-tag">AWS Services</span>
                             <span class="skill-tag">GitHub Actions</span>
-                            <span class="skill-tag">Serverless Framework</span>
                             <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Serverless Framework</span>
                         </div>
                     </div>
 
