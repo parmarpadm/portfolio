@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Padm M. Parmar - Senior Software Engineer with 7+ years of expertise in full-stack development, DevOps, and IoT solutions">
+    <meta name="keywords"
+        content="Padm Parmar, Software Engineer, Full Stack Developer, React, Node.js, Python, AWS, DevOps">
+    <meta name="author" content="Padm M. Parmar">
+
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Padm M. Parmar - Senior Software Engineer">
+    <meta property="og:description"
+        content="Experienced Senior Software Engineer with expertise in full-stack development, DevOps, and IoT solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/">
+
+    <title>Padm M. Parmar - Senior Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #f59e0b;
+            --dark-bg: #1e293b;
+            --light-bg: #f8fafc;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.3;
+            }
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        .header-text {
+            text-align: left;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .header .title {
+            font-size: 1.4em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a.contact-item {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Content Section */
+        .content {
+            padding: 60px 40px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            animation: fadeIn 0.6s ease both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* Profile Summary */
+        .profile {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            padding: 25px;
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        /* Experience Cards */
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .experience-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .company {
+            font-weight: 700;
+            font-size: 1.3em;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .position {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        .duration {
+            color: var(--text-secondary);
+            font-style: normal;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.95em;
+        }
+
+        .duration::before {
+            content: '📅';
+            font-size: 0.9em;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-category {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(99, 102, 241, 0.3);
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 30px;
+            padding: 30px;
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            background-image: linear-gradient(var(--light-bg), var(--light-bg)),
+                linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+
+        .project-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.4em;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-title::before {
+            content: '🚀';
+            font-size: 1.2em;
+        }
+
+        .project-description {
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .project-tech {
+            background: var(--white);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        /* Education Section */
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            margin-bottom: 20px;
+            background: var(--light-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .education-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-details h3 {
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-size: 1.2em;
+        }
+
+        .education-details p {
+            color: var(--text-secondary);
+            font-size: 1em;
+        }
+
+        .education-year {
+            text-align: right;
+        }
+
+        .grade {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1em;
+        }
+
+        /* Personal Info */
+        .personal-info {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .personal-info div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .personal-info strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            --light-bg: #0f172a;
+            --white: #1e293b;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .dark-mode body {
+            background: #0f172a;
+        }
+
+        /* Controls */
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header-content {
+                text-align: center;
+            }
+
+            .header-text {
+                text-align: center;
+            }
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .education-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .education-year {
+                text-align: left;
+                margin-top: 15px;
+            }
+
+            .controls {
+                bottom: 20px;
+                right: 20px;
+                flex-direction: column;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            .controls {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                margin: 0;
+            }
+
+            .header {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controls">
+        <button class="btn" onclick="toggleMode()">🌙 Dark</button>
+        <button class="btn" onclick="window.print()">📄 PDF</button>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <img src="img/PADM_PARMAR.jpeg" alt="Padm M. Parmar" class="profile-pic"
+                    onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgZmlsbD0iIzY2NjZmMSIvPgogIDx0ZXh0IHg9IjkwIiB5PSI5NSIgZm9udC1zaXplPSI2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCI+UFA8L3RleHQ+Cjwvc3ZnPg=='" />
+                <div class="header-text">
+                    <h1>Padm M. Parmar</h1>
+                    <div class="title">Senior Software Engineer</div>
+                    <div class="contact-info">
+                        <a href="tel:+918866116425" class="contact-item">
+                            <span>📱</span>
+                            <span>+91-8866116425</span>
+                        </a>
+                        <a href="mailto:parmarpadm@gmail.com" class="contact-item">
+                            <span>✉️</span>
+                            <span>parmarpadm@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/padm-mp" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <span>🔗</span>
+                            <span>linkedin.com/in/padm-mp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <div class="profile">
+                    Experienced Senior Software Engineer with 7+ years of expertise in full-stack development, DevOps,
+                    and IoT solutions. Currently contributing to innovative projects at Benthon Labs, Noida. Graduated
+                    from Gujarat Technological University with a Bachelor's degree in Computer Engineering (2017).
+                    Proven track record in delivering efficient, scalable solutions with strong analytical skills,
+                    self-learning capability, and extensive experience in cloud technologies and automation systems.
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Professional Experience</h2>
+
+                <div class="experience-item">
+                    <div class="company">Benthon Labs Pvt Ltd</div>
+                    <div class="position">Senior Software Engineer</div>
+                    <div class="duration">Oct 2021 - Present (Remote)</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company">Enliven Digital Content</div>
+                    <div class="position">Full Stack Developer</div>
+                    <div class="duration">Jul 2019 - Sep 2021</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company">Cloudedots</div>
+                    <div class="position">Junior Software Developer</div>
+                    <div class="duration">Feb 2018 - Jul 2019</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company">S-Config Infosoft</div>
+                    <div class="position">Java Developer</div>
+                    <div class="duration">Nov 2017 - Jan 2018</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company">Sky9 I.T. Craft</div>
+                    <div class="position">Trainee</div>
+                    <div class="duration">Nov 2016 - Nov 2017</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">Electron.js</span>
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Django REST Framework</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Cloud & DevOps</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS Services</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">Serverless Framework</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>IoT & Hardware</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Raspberry Pi</span>
+                            <span class="skill-tag">Arduino</span>
+                            <span class="skill-tag">ESP8266/ESP32</span>
+                            <span class="skill-tag">Alexa Skills</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Others</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Key Projects</h2>
+
+                <div class="project-item">
+                    <div class="project-title">MasterFFL</div>
+                    <div class="project-description">
+                        Comprehensive web application for FFL (Federal Firearms License) compliance and management.
+                        Features automated license verification, enriched dealer data, and seamless e-commerce
+                        integration. Supports multiple user roles including Global Admin, Store Admin, and Agents with
+                        complete workflow management.
+                    </div>
+                    <div class="project-tech"><strong>Technology:</strong> React.js, Serverless Framework, AWS,
+                        PostgreSQL | <strong>Team Size:</strong> 8</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Primetrack</div>
+                    <div class="project-description">
+                        React-based application ecosystem for dance schools featuring three integrated applications:
+                        school, teacher, and student portals. Single backend platform built with Golang and hosted on
+                        GCP Cloud Run for scalable performance.
+                    </div>
+                    <div class="project-tech"><strong>Technology:</strong> Golang, Docker, GCP Cloud Run, Firebase,
+                        PostgreSQL | <strong>Team Size:</strong> 6</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">MoneyZapp</div>
+                    <div class="project-description">
+                        Multi-service platform offering mobile recharge, bill payments, online shopping, ticket
+                        bookings, and money transfers. Comprehensive payment gateway integration with user-friendly
+                        interface for various financial services.
+                    </div>
+                    <div class="project-tech"><strong>Technology:</strong> React, TypeScript, Python, AWS | <strong>Team
+                            Size:</strong> 5+</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Face Recognition System (POC)</div>
+                    <div class="project-description">
+                        Corporate face attendance system with two phases: training (capture and ML model training) and
+                        recognition (live camera stream processing). Integrated with AWS services for scalable machine
+                        learning capabilities.
+                    </div>
+                    <div class="project-tech"><strong>Technology:</strong> AWS Lambda, AWS SAM, AWS Rekognition,
+                        DynamoDB, Python</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">House of Parmar (Personal Project)</div>
+                    <div class="project-description">
+                        Smart home automation system converting ordinary appliances into IoT-enabled devices.
+                        Integration with Alexa Echo Dot, Google Assistant, and custom hardware solutions for
+                        comprehensive home control.
+                    </div>
+                    <div class="project-tech"><strong>Technology:</strong> Alexa Skills, ESP Rainmaker, NodeMCU, ESP32,
+                        Google Assistant</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Dhaman III</div>
+                    <div class="project-description">
+                        First PLC-based ventilator with compressor technology. State-of-the-art redundant system for
+                        accurate and precise breathing assistance. Focused on patient safety with easy-to-use interface.
+                    </div>
+                    <div class="project-tech"><strong>Technology:</strong> Electron.js, Socket.io, Raspberry Pi 4B, PLC
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="education-details">
+                        <h3>Bachelor of Engineering - Computer Engineering</h3>
+                        <p>Gujarat Technological University</p>
+                    </div>
+                    <div class="education-year">
+                        <div>2017</div>
+                        <div class="grade">CGPA: 7.99</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-details">
+                        <h3>Higher Secondary Certificate (H.S.C.)</h3>
+                        <p>Shree S. V. Virani High School, Rajkot</p>
+                    </div>
+                    <div class="education-year">
+                        <div>2013</div>
+                        <div class="grade">43.53%</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-details">
+                        <h3>Secondary School Certificate (S.S.C.)</h3>
+                        <p>Shree S. V. Virani High School, Rajkot</p>
+                    </div>
+                    <div class="education-year">
+                        <div>2011</div>
+                        <div class="grade">73% (80.17% PR)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Personal Information</h2>
+                <div class="personal-info">
+                    <div><strong>Date of Birth:</strong> January 13, 1996</div>
+                    <div><strong>Languages:</strong> English, Hindi, Gujarati</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.controls .btn');
+            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light' : '🌙 Dark';
+        }
+
+        // Add smooth scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.animationPlayState = 'paused';
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
