@@ -5,9 +5,11 @@
 
 <br/>
 
-<div align="center" style="font-size:14.5px;line-height:1.8;margin-bottom:8px;">
-📱 <b>+91 8866116425</b> &nbsp;•&nbsp; ✉️ <a href="mailto:parmarpadm@gmail.com">parmarpadm@gmail.com</a> &nbsp;•&nbsp;  
-🔗 <a href="https://www.linkedin.com/in/padm-mp/">linkedin.com/in/padm-mp</a> &nbsp;•&nbsp; 📍 Remote, Rajkot, Ahmedabad  
+<div style="text-align:center; margin-bottom:20px;">
+  <p style="margin:4px 0;">📱 <b>Phone:</b> +91 8866116425</p>
+  <p style="margin:4px 0;">✉️ <b>Email:</b> <a href="mailto:parmarpadm@gmail.com">parmarpadm@gmail.com</a></p>
+  <p style="margin:4px 0;">🔗 <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/padm-mp/">padm-mp</a></p>
+  <p style="margin:4px 0;">📍 <b>Preferred Location:</b> Remote, Rajkot, Ahmedabad</p>
 </div>
 
 ---
